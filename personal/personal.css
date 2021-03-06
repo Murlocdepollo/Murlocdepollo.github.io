@@ -22,9 +22,15 @@ body{
     min-width: 280px;
     margin: 0 auto;
 }   
-header a{
+a{
     text-decoration: none;
     color: whitesmoke;
+}
+.no-seleccionable { /* añadir esto a la clase si no quieres que sea seleccionable */
+    -moz-user-select: none; 
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
 
 /* #region nav-bar*/
@@ -160,7 +166,6 @@ form input{
 }
 /* #endregion nav-bar*/
 
-
 /* #region main*/
 main h1, h2{
     text-align: center;
@@ -172,14 +177,13 @@ img {
 }
 .swamp {
     margin: 4em auto;
-    width: 30%;
-    height: 30%;
+    width: 25em;
+    height: 25em;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-
-    background-color: rgb(126, 124, 226);
+    cursor: pointer;
     padding: 0.1em;
     gap: 0.1em;
 }
@@ -189,11 +193,34 @@ img {
 .swamp img {
     transform: scale(0.5);
 }
-.swamp img:hover {
-    transform: scale(0.6);
+.swamp div:hover {
+    border-radius: 0.2em;
+    border: 0.1em solid whitesmoke;
+    background-color: var(--second-color);
 }
 /* #endregion main*/
 
+/*#region footer*/
+footer{
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+    align-items: center;
+    justify-content: space-around;
+}
+footer img{
+    width: 2em;
+}
+footer ul li{
+    margin: 1em;
+    display: inline;
+}
+footer p{
+    color: whitesmoke;
+    font-size: 0.7rem;
+}
+/*#endregion footer */
 
 /*#region bubble */
 .bubble {
@@ -251,7 +278,7 @@ img {
 }
 /*#endregion bubble */
 
-
+/* #region keyframes */
 @keyframes subida {
     0%{
         bottom: 1vh;
@@ -286,3 +313,5 @@ img {
         background-color: antiquewhite;
     }
   }
+
+  /* #endregion keyframes */
