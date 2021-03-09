@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulariopizza.css">
+</head>
+
+<body>
+    <div>
+        <!--wrapper-->
+        <header>
+            <h1>Pizzeria
+                <span>La Buena Pizza</span>
+            </h1>
+
+            <h2>Pedido de pizza</h2>
+        </header>
+
+        <form action="">
+
+            <fieldset class="one">
+                <legend>Ingredientes</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="queso" name="queso">
+                        <label for="queso">Queso</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="atun" name="atun">
+                        <label for="atun">Atún</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="jamon" name="jamon">
+                        <label for="jamon">Jamón</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="pinia" name="pinia">
+                        <label for="pinia">Piña</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="platano" name="platano">
+                        <label for="platano">Plátano</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="garbanzos" name="garbanzos">
+                        <label for="garbanzos">Garbanzos</label>
+                    </li>
+                </ul>
+
+                <label for="ingredientes">Otros:</label>
+                <textarea name="ingredientes" id="ingredientes" cols="30" rows="10"
+                    placeholder="Indique otros ingredientes u otras indicaciones para su pizza...">
+                </textarea>
+
+            </fieldset>
+
+            <fieldset class="two">
+                <legend>Tamaño</legend>
+
+                <ul>
+                    <li>
+                        <label><input name="tamaño" type="radio" checked> pequeña</label>
+                    </li>
+
+                    <li>
+                        <label><input name="tamaño" type="radio"> mediana</label>
+                    </li>
+
+                    <li>
+                        <label><input name="tamaño" type="radio"> grande</label>
+                    </li>
+                </ul>
+
+            </fieldset>
+
+            <fieldset class="three">
+                <Legend>Entrega</Legend>
+
+                <label for="cliente">Cliente</label>
+                <input type="text" id="cliente" name="cliente" placeholder="Introduzca su nombre aquí...">
+
+                <label for="direccion">Dirección</label>
+                <textarea name="" id="" cols="30" rows="10" placeholder="C/ nº puerta..."></textarea>
+
+                <label for="hora de entrega">Hora de entrega</label>
+                <input type="time">
+
+            </fieldset>
+
+            <fieldset class="four">
+                <legend>Escoger Oferta</legend>
+                <select name="" id="">
+                    <option value="">2 por 1</option>
+                    <option value="">2 por nada</option>
+                    <option value="">1 por 2</option>
+                </select>
+
+                <input value="Realizar pedido" type="submit">
+
+            </fieldset>
+
+        </form>
+
+    </div>
+</body>
+
+</html>
