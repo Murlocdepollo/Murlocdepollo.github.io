@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --main-color: rgba(44, 56, 54, 0.8);
+    --second-color: rgba(33,33,33,0.9);
+    --columns: 32;  
+}
+
+
+body{
+    padding: 1em;
+    border: 0.1em solid var(--second-color);
+    text-align: center;
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+    background: var(--main-color);
+    
+}
+
+#board {
+    
+    border: 0.1em solid var(--second-color);
+    width: 100%;
+    height: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--columns), 1fr);
+    
+}
+
+.cell {
+    background-color: rgb(42, 49, 42);
+}
+
+.cell.live {
+    background-color: whitesmoke;
+}
+
+canvas {
+    background-color: rgb(29, 32, 34);
+}
